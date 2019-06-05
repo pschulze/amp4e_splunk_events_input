@@ -100,7 +100,7 @@ When installing or upgrading the app, Splunk simply copies all the files from th
 Creates a package for release on Splunkbase.
 
 ```bash
-docker-compose exec splunk sh -c "cd release;fab splunkbase_release"
+docker-compose exec -u root splunk sh -c "cd release;fab splunkbase_release"
 ```
 
 ## Known Issues
