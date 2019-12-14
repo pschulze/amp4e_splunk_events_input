@@ -7,5 +7,6 @@ RUN python get-pip.py
 RUN rm get-pip.py
 ENV LD_LIBRARY_PATH=${SPLUNK_HOME}/lib:/bin/openssl:${LD_LIBRARY_PATH}
 ENV SPLUNK_DB=${SPLUNK_HOME}/var/lib/splunk
+ENV PYTHONPATH=${SPLUNK_HOME}/etc/apps/amp4e_events_input/bin/python_modules:${PYTHONPATH}
 COPY amp_entrypoint.sh /sbin
 USER ${ANSIBLE_USER}
