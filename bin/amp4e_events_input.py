@@ -1,7 +1,10 @@
 import sys
+import os
 import time
 import traceback
 import json
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.realpath(__file__)), 'python_modules'))
 
 from splunklib.modularinput import Argument, Event, Scheme, Script
 
